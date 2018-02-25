@@ -19,6 +19,9 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - InventoryUtility
  *  - Devise a better way to handle inventory sizes than numbers
  *  - Add checks for null items and stuff like that to Menu for simplification
+ *  - Reflection utilities
+ *  - Convert ItemBuilder to use Lombok and document
+ *  - Wrap Player
  */
 public class CorePlugin extends JavaPlugin {
 

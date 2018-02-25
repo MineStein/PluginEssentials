@@ -17,6 +17,7 @@ public final class ItemBuilder
     private String displayName = null;
     private List<String> lore = null;
     private Map<Enchantment, Integer> enchantments = null;
+    private ItemAction action = null;
 
     public ItemBuilder() {}
 
@@ -95,6 +96,14 @@ public final class ItemBuilder
     public ItemBuilder enchantments(Map<Enchantment, Integer> enchantments)
     {
         this.enchantments = enchantments;
+
+        return this;
+    }
+
+    public ItemBuilder withAction(ItemAction action) {
+        action.setCorrespondingItem(this);
+
+        this.action = action;
 
         return this;
     }
