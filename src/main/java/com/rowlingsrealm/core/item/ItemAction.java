@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 /**
  * Copyright Tyler Grissom 2018
  */
+@Deprecated
 public abstract class ItemAction implements Listener {
 
     @Getter         private CorePlugin plugin;
