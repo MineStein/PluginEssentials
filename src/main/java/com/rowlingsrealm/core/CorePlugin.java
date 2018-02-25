@@ -18,6 +18,11 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class CorePlugin extends JavaPlugin {
 
+    /**
+     * Registers your event listeners.
+     *
+     * @param listeners The listeners to register.
+     */
     public void registerListeners(Listener... listeners) {
         for (Listener listener :
              listeners) {
@@ -25,6 +30,11 @@ public class CorePlugin extends JavaPlugin {
         }
     }
 
+    /**
+     * Registers your command executors and tab completers, bundled into one class.
+     *
+     * @param bases The CommandBases to register.
+     */
     public void registerCommands(CommandBase... bases) {
         for (CommandBase base :
                 bases) {

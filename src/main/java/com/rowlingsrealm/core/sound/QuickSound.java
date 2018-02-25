@@ -8,6 +8,12 @@ import org.bukkit.entity.Player;
  */
 public class QuickSound {
 
+    /**
+     * Plays a sound for the players.
+     *
+     * @param sound The sound to play.
+     * @param players The players to play the sound for.
+     */
     public static void play(Sound sound, Player... players) {
         for (Player player :
                 players) {
@@ -15,10 +21,20 @@ public class QuickSound {
         }
     }
 
+    /**
+     * Plays the UI_BUTTON_CLICK sound for players.
+     *
+     * @param players The players to play the click for.
+     */
     public static void click(Player... players) {
         play(Sound.UI_BUTTON_CLICK, players);
     }
 
+    /**
+     * Plays the ENTITY_PLAYER_LEVELUP sound for players.
+     *
+     * @param players The players to play the level up for.
+     */
     public static void levelUp(Player... players) {
         play(Sound.ENTITY_PLAYER_LEVELUP, players);
     }
