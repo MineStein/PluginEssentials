@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fad95da2-f2b2-4216-af28-91410925e921" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Core_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Core_jar2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitlab-ci.yml" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java" afterPath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,12 +29,14 @@
       <file leaf-file-name="CorePlugin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="514">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,11 +122,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/CommandBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/item/DynamicItemStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/color/ColoredMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/CoreCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java" />
       </list>
     </option>
   </component>
@@ -363,12 +361,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518738573392</updated>
       <workItem from="1518738581320" duration="12063000" />
-      <workItem from="1519529826317" duration="2982000" />
+      <workItem from="1519529826317" duration="3340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15045000" />
+    <option name="totallyTimeSpent" value="15403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -456,8 +454,10 @@
           <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -608,14 +608,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        <state relative-caret-position="514">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
           </folding>
         </state>
       </provider>

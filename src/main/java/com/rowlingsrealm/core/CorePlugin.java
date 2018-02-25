@@ -1,6 +1,7 @@
 package com.rowlingsrealm.core;
 
 import com.rowlingsrealm.core.command.CommandBase;
+import com.rowlingsrealm.core.command.CoreCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
@@ -34,7 +35,7 @@ public class CorePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
+        registerCommands(new CoreCommand(this));
     }
 
     @Override
