@@ -10,6 +10,13 @@
     </parent>
 
     <artifactId>Example</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.rowlingsrealm.core</groupId>
+            <artifactId>Core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
