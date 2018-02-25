@@ -21,6 +21,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Reflection utilities
  *  - Convert ItemBuilder to use Lombok and document
  *  - Wrap Player
+ *  - Pagination for menus
  */
 public class CorePlugin extends JavaPlugin {
 
