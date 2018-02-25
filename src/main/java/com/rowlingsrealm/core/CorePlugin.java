@@ -12,9 +12,10 @@ import org.bukkit.plugin.java.JavaPlugin;
  *
  * TODO:
  *  - Simple ConfigurationSerializable implementation
- *  - Inventory library
  *  - Magic integration
  *  - Configurable messages
+ *  - DynamicItemStack for elegant item click handling
+ *  - Add inline support for listeners to menus
  */
 public class CorePlugin extends JavaPlugin {
 
