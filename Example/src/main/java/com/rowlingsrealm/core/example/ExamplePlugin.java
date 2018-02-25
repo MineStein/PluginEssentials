@@ -10,6 +10,6 @@ public class ExamplePlugin extends CorePlugin {
 
     @Override
     public void onEnable() {
-        registerCommands(new ExampleCommand());
+        registerCommands(new ExampleCommand(this));
     }
 }

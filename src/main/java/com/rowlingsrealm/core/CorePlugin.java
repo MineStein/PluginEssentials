@@ -15,7 +15,10 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Magic integration
  *  - Configurable messages
  *  - DynamicItemStack for elegant item click handling
- *  - Add inline support for listeners to menus
+ *  - InventoryBuilder
+ *  - InventoryUtility
+ *  - Devise a better way to handle inventory sizes than numbers
+ *  - Add checks for null items and stuff like that to Menu for simplification
  */
 public class CorePlugin extends JavaPlugin {
 
