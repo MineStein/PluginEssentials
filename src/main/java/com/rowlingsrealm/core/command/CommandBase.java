@@ -17,9 +17,9 @@ public abstract class CommandBase implements CommandExecutor, TabCompleter {
 
     @Getter private String commandLabel;
 
-    abstract void execute(CommandDetails details);
+    public abstract void execute(CommandDetails details);
 
-    abstract List<String> tab(CommandDetails details);
+    public abstract List<String> tab(CommandDetails details);
 
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         execute(new CommandDetails(commandSender, command, s, strings));

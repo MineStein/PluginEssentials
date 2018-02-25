@@ -18,14 +18,14 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class CorePlugin extends JavaPlugin {
 
-    private void registerListeners(Listener... listeners) {
+    public void registerListeners(Listener... listeners) {
         for (Listener listener :
              listeners) {
             Bukkit.getPluginManager().registerEvents(listener, this);
         }
     }
 
-    private void registerCommands(CommandBase... bases) {
+    public void registerCommands(CommandBase... bases) {
         for (CommandBase base :
                 bases) {
             getCommand(base.getCommandLabel()).setExecutor(base);

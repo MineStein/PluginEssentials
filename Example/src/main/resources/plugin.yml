@@ -1,0 +1,13 @@
+name: Example
+version: 1.0.0
+main: com.rowlingsrealm.core.example.ExamplePlugin
+
+description: "An example of how to use Rowling's Realm's Core libraries."
+authors: [Tyler Grissom]
+website: http://rowlingsrealm.com
+
+depend: [Core]
+
+commands:
+  example:
+    description: An example, multi-functioned command.

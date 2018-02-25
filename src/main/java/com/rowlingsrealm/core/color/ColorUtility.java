@@ -7,6 +7,8 @@ import org.bukkit.ChatColor;
  */
 public class ColorUtility {
 
+    public static char LEGAL_SECTION_SYMBOL = '§';
+
     public static String strip(String str) {
         return ChatColor.stripColor(str);
     }
