@@ -100,12 +100,15 @@ public final class ItemBuilder
         return this;
     }
 
+    @Deprecated
     public ItemBuilder withAction(ItemAction action) {
-        action.setCorrespondingItem(this);
-
-        this.action = action;
-
-        return this;
+        throw new UnsupportedOperationException("Refrain from using ItemBuilder#withAction for the time being as actions as not persistent");
+//
+//        action.setCorrespondingItem(this);
+//
+//        this.action = action;
+//
+//        return this;
     }
 
     public ItemStack build()

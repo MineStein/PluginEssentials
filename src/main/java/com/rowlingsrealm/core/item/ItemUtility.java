@@ -1,5 +1,6 @@
 package com.rowlingsrealm.core.item;
 
+import com.google.common.collect.ComparisonChain;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -18,7 +19,10 @@ public class ItemUtility {
      * @return Whether or not there was a match.
      */
     public static boolean isSimilar(ItemStack item, Material material) {
-        return item.getType().equals(material);
+        return ComparisonChain
+                .start()
+                .compare(item.getType(), material)
+                .result() == 0;
     }
 
     /**
@@ -29,7 +33,14 @@ public class ItemUtility {
      * @return Whether or not there was a match.
      */
     public static boolean isSimilar(ItemStack item, String name) {
-        return strip(item.getItemMeta().getDisplayName()).equalsIgnoreCase(strip(name));
+        String displayName = strip(item.getItemMeta().getDisplayName()).toLowerCase();
+
+        name = strip(name).toLowerCase();
+
+        return ComparisonChain
+                .start()
+                .compare(displayName, name)
+                .result() == 0;
     }
 
     /**

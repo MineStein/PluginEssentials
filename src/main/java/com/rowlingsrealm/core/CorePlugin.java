@@ -14,7 +14,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Simple ConfigurationSerializable implementation
  *  - Magic integration
  *  - Configurable messages
- *  - DynamicItemStack for elegant item click handling
  *  - InventoryBuilder
  *  - InventoryUtility
  *  - Devise a better way to handle inventory sizes than numbers
