@@ -1,0 +1,11 @@
+name: Core
+version: 1.0.0
+main: com.rowlingsrealm.core.CorePlugin
+
+description: "Rowling's Realm's core plugin!"
+authors: [Tyler Grissom]
+website: http://rowlingsrealm.com
+
+commands:
+  core:
+    description: Check the Core version.
