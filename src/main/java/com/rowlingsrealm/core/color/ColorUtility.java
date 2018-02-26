@@ -7,6 +7,8 @@ import org.bukkit.ChatColor;
  */
 public class ColorUtility {
 
+    // TODO Add ChatColor enums and stuff to here for easy access
+
     public static char LEGAL_SECTION_SYMBOL = '§';
 
     /**
