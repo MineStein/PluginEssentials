@@ -2,10 +2,15 @@ package com.rowlingsrealm.core;
 
 import com.rowlingsrealm.core.command.CommandBase;
 import com.rowlingsrealm.core.command.CoreCommand;
+import com.rowlingsrealm.core.message.MessageManager;
+import lombok.Getter;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
 
 /**
  * Copyright Tyler Grissom 2018
@@ -19,11 +24,41 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Devise a better way to handle inventory sizes than numbers
  *  - Add checks for null items and stuff like that to Menu for simplification
  *  - Reflection utilities
- *  - Convert ItemBuilder to use Lombok and document
+ *  - Custom, deep ItemBuilder with documentation
  *  - Wrap Player
  *  - Pagination for menus
+ *  - Add support to MessageManager for custom replace formats such as %value% instead of default $value
+ *  - Provide a set of default messages that are commonly used for consistency (i.e. no permission, only players, etc.)
  */
 public class CorePlugin extends JavaPlugin {
+
+    private FileConfiguration messagesYml;
+    private File messagesFile;
+
+    @Getter private MessageManager messageManager;
+
+    /**
+     * Sets up the config.yml for this plugin.
+     */
+    public FileConfiguration setupDefaultConfigurationFile() {
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+
+        return getConfig();
+    }
+
+    /**
+     * Sets up the MessageManager instance for this plugin.
+     *
+     * @return The MessageManager instance.
+     */
+    public MessageManager setupMessageManager() {
+        if (messageManager != null) return messageManager;
+
+        this.messageManager = new MessageManager(this);
+
+        return this.messageManager;
+    }
 
     /**
      * Registers your event listeners.
