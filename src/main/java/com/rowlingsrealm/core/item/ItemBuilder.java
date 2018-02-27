@@ -3,6 +3,7 @@ package com.rowlingsrealm.core.item;
 import lombok.Getter;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -19,6 +20,7 @@ public final class ItemBuilder
     @Getter private List<String> lore = null;
     @Getter private Map<Enchantment, Integer> enchantments = null;
     @Getter private ItemAction action = null;
+    @Getter private List<ItemFlag> flags;
 
     public ItemBuilder() {}
 
@@ -82,28 +84,45 @@ public final class ItemBuilder
 //        return this;
     }
 
+    public ItemBuilder withFlags(ItemFlag... flags) {
+        this.flags.addAll(Arrays.asList(flags));
+
+        return this;
+    }
+
+    public ItemBuilder withoutFlags(ItemFlag... flags) {
+        this.flags.removeAll(Arrays.asList(flags));
+
+        return this;
+    }
+
     public ItemStack build()
     {
-        ItemStack itemStack = new ItemStack(getMaterial(), getAmount().intValue(), (short)getData().byteValue());
-        ItemMeta itemMeta;
-        if ((this.displayName != null) || (this.lore != null))
-        {
-            itemMeta = itemStack.getItemMeta();
-            if (this.displayName != null) {
-                itemMeta.setDisplayName(this.displayName);
+        ItemStack item = new ItemStack(getMaterial(), getAmount(), (short) getData()); {
+            ItemMeta meta;
+
+            if (getDisplayName() != null || getLore() != null || getFlags() != null) {
+                meta = item.getItemMeta();
+
+                if (getDisplayName() != null) meta.setDisplayName(getDisplayName());
+                if (getLore() != null) meta.setLore(getLore());
+                if (getFlags() != null) {
+                    meta.getItemFlags().clear();
+                    meta.addItemFlags((ItemFlag[]) getFlags().toArray());
+                }
+
+                item.setItemMeta(meta);
             }
-            if (this.lore != null) {
-                itemMeta.setLore(this.lore);
+
+            if (getEnchantments() != null) {
+                getEnchantments().forEach((enchantment, integer) -> {
+                    int level = getEnchantments().get(enchantment);
+
+                    item.addUnsafeEnchantment(enchantment, level);
+                });
             }
-            itemStack.setItemMeta(itemMeta);
         }
-        if (this.enchantments != null) {
-            for (Enchantment ench : this.enchantments.keySet())
-            {
-                int level = ((Integer)this.enchantments.get(ench)).intValue();
-                itemStack.addUnsafeEnchantment(ench, level);
-            }
-        }
-        return itemStack;
+
+        return item;
     }
 }

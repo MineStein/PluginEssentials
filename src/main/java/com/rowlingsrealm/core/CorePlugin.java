@@ -32,6 +32,7 @@ import java.io.File;
  *  - Titles
  *  - Boss bars
  *  - Action bars
+ *  - Add logging with verbosity options
  */
 public class CorePlugin extends JavaPlugin {
 
