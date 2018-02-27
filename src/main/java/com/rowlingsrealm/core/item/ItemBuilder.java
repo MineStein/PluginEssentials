@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public final class ItemBuilder
     @Getter private List<String> lore = null;
     @Getter private Map<Enchantment, Integer> enchantments = null;
     @Getter private ItemAction action = null;
-    @Getter private List<ItemFlag> flags;
+    @Getter private List<ItemFlag> flags = new ArrayList<>();
 
     public ItemBuilder() {}
 
@@ -108,7 +109,8 @@ public final class ItemBuilder
                 if (getLore() != null) meta.setLore(getLore());
                 if (getFlags() != null) {
                     meta.getItemFlags().clear();
-                    meta.addItemFlags((ItemFlag[]) getFlags().toArray());
+
+                    getFlags().forEach(meta::addItemFlags);
                 }
 
                 item.setItemMeta(meta);
