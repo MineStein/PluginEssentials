@@ -29,6 +29,9 @@ import java.io.File;
  *  - Pagination for menus
  *  - Add support to MessageManager for custom replace formats such as %value% instead of default $value
  *  - Provide a set of default messages that are commonly used for consistency (i.e. no permission, only players, etc.)
+ *  - Titles
+ *  - Boss bars
+ *  - Action bars
  */
 public class CorePlugin extends JavaPlugin {
 

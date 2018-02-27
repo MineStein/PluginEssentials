@@ -1,5 +1,6 @@
 package com.rowlingsrealm.core.item;
 
+import lombok.Getter;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -11,45 +12,15 @@ import java.util.Map;
 
 public final class ItemBuilder
 {
-    private Material material = null;
-    private Integer amount = Integer.valueOf(1);
-    private Byte data = Byte.valueOf((byte)0);
-    private String displayName = null;
-    private List<String> lore = null;
-    private Map<Enchantment, Integer> enchantments = null;
-    private ItemAction action = null;
+    @Getter private Material material = null;
+    @Getter private Integer amount = Integer.valueOf(1);
+    @Getter private Byte data = Byte.valueOf((byte)0);
+    @Getter private String displayName = null;
+    @Getter private List<String> lore = null;
+    @Getter private Map<Enchantment, Integer> enchantments = null;
+    @Getter private ItemAction action = null;
 
     public ItemBuilder() {}
-
-    public Material getMaterial()
-    {
-        return this.material;
-    }
-
-    public Integer getAmount()
-    {
-        return this.amount;
-    }
-
-    public Byte getData()
-    {
-        return this.data;
-    }
-
-    public String getDisplayName()
-    {
-        return this.displayName;
-    }
-
-    public List<String> getLore()
-    {
-        return this.lore;
-    }
-
-    public Map<Enchantment, Integer> getEnchantments()
-    {
-        return this.enchantments;
-    }
 
     public ItemBuilder type(Material material)
     {
