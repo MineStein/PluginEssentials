@@ -1,2 +1,2 @@
-enabled: 'Your $plugin has been enabled! Success!'
-test: '&4&lX &cIt worked! &6&l&mYay!'
+title: '&aThis example worked!'
+subtitle: '&cAwesome!'

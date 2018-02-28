@@ -20,6 +20,18 @@ public class User {
 
     @Getter private Player player;
 
+    public void sendTitle(String title, String subtitle, int fadeIn, int stay, int fadeOut) {
+        getPlayer().sendTitle(title, subtitle, fadeIn, stay, fadeOut);
+    }
+
+    public void sendTitle(String title, String subtitle, int stay) {
+        sendTitle(title, subtitle, 10, stay, 10);
+    }
+
+    public void sendTitle(String title, String subtitle) {
+        sendTitle(title, subtitle, 100);
+    }
+
     public PlayerInventory getInventory() {
         return getPlayer().getInventory();
     }

@@ -39,6 +39,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Simple SQL database driver access and method wrapping
  *  - Item message https://www.spigotmc.org/threads/itemmessagereloaded-popup-message-packet.304903/
  *  - Advancements https://www.spigotmc.org/threads/advancement-creator-rapid-advancement-creation-library.293465/
+ *  - Send tab header and footer
  */
 public class CorePlugin extends JavaPlugin {
 
