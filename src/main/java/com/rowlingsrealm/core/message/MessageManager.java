@@ -24,6 +24,9 @@ public class MessageManager {
         this.plugin = plugin;
     }
 
+    /**
+     * Reloads the messages.yml.
+     */
     public void reloadMessages() {
         if (messagesFile == null) {
             messagesFile = new File(getPlugin().getDataFolder(), "messages.yml");
@@ -46,6 +49,11 @@ public class MessageManager {
         }
     }
 
+    /**
+     * Gets the messages.yml.
+     *
+     * @return The messages.yml configuration file.
+     */
     public FileConfiguration getMessages() {
         if (messagesFile == null) {
             reloadMessages();
@@ -54,6 +62,9 @@ public class MessageManager {
         return messagesYml;
     }
 
+    /**
+     * Saves the messages.yml.
+     */
     public void saveMessages() {
         if (messagesYml == null || messagesFile == null) {
             return;
@@ -66,6 +77,12 @@ public class MessageManager {
         }
     }
 
+    /**
+     * Retrieves the Message at the node.
+     *
+     * @param node The node to look for.
+     * @return The Message instance.
+     */
     public Message getMessage(String node) {
         FileConfiguration config = getMessages();
         Object obj = config.get(node);

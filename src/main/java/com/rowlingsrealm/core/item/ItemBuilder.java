@@ -12,19 +12,36 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public final class ItemBuilder
-{
-    @Getter private Material material = null;
-    @Getter private Integer amount = Integer.valueOf(1);
-    @Getter private Byte data = Byte.valueOf((byte)0);
-    @Getter private String displayName = null;
-    @Getter private List<String> lore = null;
-    @Getter private Map<Enchantment, Integer> enchantments = null;
-    @Getter private ItemAction action = null;
-    @Getter private List<ItemFlag> flags = new ArrayList<>();
+public final class ItemBuilder {
 
-    public ItemBuilder() {}
+    @Getter private Material material;
+    @Getter private int amount;
+    @Getter private byte data;
+    @Getter private short durability;
+    @Getter private String displayName;
+    @Getter private List<String> lore;
+    @Getter private Map<Enchantment, Integer> enchantments;
+    @Getter private ItemAction action;
+    @Getter private List<ItemFlag> flags;
 
+    public ItemBuilder() {
+        this.material = null;
+        this.amount = 1;
+        this.data = 0;
+        this.durability = 0;
+        this.displayName = null;
+        this.lore = null;
+        this.enchantments = null;
+        this.action = null;
+        this.flags = new ArrayList<>();
+    }
+
+    /**
+     * Sets the Material of the resulting ItemStack.
+     *
+     * @param material The Material.
+     * @return The ItemBuilder instance.
+     */
     public ItemBuilder type(Material material)
     {
         this.material = material;
@@ -32,74 +49,137 @@ public final class ItemBuilder
         return this;
     }
 
-    public ItemBuilder amount(Integer amount)
-    {
+    /**
+     * Sets the amount of the resulting ItemStack.
+     *
+     * @param amount The amount represented as an Integer.
+     * @return The ItemBuilder instance.
+     */
+    public ItemBuilder amount(int amount) {
         this.amount = amount;
 
         return this;
     }
 
-    public ItemBuilder data(Byte data)
-    {
+    /**
+     * Sets the data of the resulting ItemStack.
+     *
+     * @param data The data represented as a Byte.
+     * @return The ItemBuilder instance;
+     */
+    public ItemBuilder data(byte data) {
         this.data = data;
 
         return this;
     }
 
-    public ItemBuilder name(String displayName)
-    {
+    /**
+     * Sets the durability of the resulting ItemStack.
+     *
+     * @param durability The durability represented as a Short.
+     * @return The ItemBuilder instance.
+     */
+    public ItemBuilder durability(short durability) {
+        this.durability = durability;
+
+        return this;
+    }
+
+    /**
+     * Sets the display name of the resulting ItemStack.
+     *
+     * @param displayName The name represented as String.
+     * @return The ItemBuilder instance.
+     */
+    public ItemBuilder name(String displayName) {
         this.displayName = displayName;
 
         return this;
     }
 
-    public ItemBuilder lore(String... strings)
-    {
+    /**
+     * Sets the lore of the resulting ItemStack.
+     *
+     * @param strings The String[] to set the lore to.
+     * @return The ItemBuilder instance.
+     */
+    public ItemBuilder lore(String... strings) {
         this.lore = Arrays.asList(strings);
 
         return this;
     }
 
-    public ItemBuilder enchant(Enchantment enchantment, Integer level)
-    {
+    /**
+     * Adds an enchantment to the resulting ItemStack.
+     *
+     * @param enchantment The Enchantment.
+     * @param level The enchantment level as an Integer.
+     * @return The ItemBuilder instance.
+     */
+    public ItemBuilder enchant(Enchantment enchantment, int level) {
         this.enchantments.put(enchantment, level);
 
         return this;
     }
 
-    public ItemBuilder enchantments(Map<Enchantment, Integer> enchantments)
-    {
+    /**
+     * Sets enchantments on the resulting ItemStack.
+     *
+     * @param enchantments The Map of Enchantments to enchantments level.
+     * @return The ItemBuilder instance.
+     */
+    public ItemBuilder enchantments(Map<Enchantment, Integer> enchantments) {
         this.enchantments = enchantments;
 
         return this;
     }
 
+    /**
+     * Attaches an ItemAction to the resulting ItemStack.
+     *
+     * @param action The ItemAction.
+     * @return The ItemBuilder instance.
+     */
     @Deprecated
     public ItemBuilder withAction(ItemAction action) {
         throw new UnsupportedOperationException("Refrain from using ItemBuilder#withAction for the time being as actions as not persistent");
-//
-//        action.setCorrespondingItem(this);
-//
-//        this.action = action;
-//
-//        return this;
+
+        // action.setCorrespondingItem(this);
+        //
+        // this.action = action;
+        //
+        // return this;
     }
 
+    /**
+     * Adds ItemFlags to the resulting ItemStack.
+     *
+     * @param flags The ItemFlags.
+     * @return The ItemBuilder instance.
+     */
     public ItemBuilder withFlags(ItemFlag... flags) {
         this.flags.addAll(Arrays.asList(flags));
 
         return this;
     }
 
+    /**
+     * Removes ItemFlags from the resulting ItemStack.
+     *
+     * @param flags The ItemFlags.
+     * @return The ItemBuilder instance.
+     */
     public ItemBuilder withoutFlags(ItemFlag... flags) {
         this.flags.removeAll(Arrays.asList(flags));
 
         return this;
     }
 
-    public ItemStack build()
-    {
-        ItemStack item = new ItemStack(getMaterial(), getAmount(), (short) getData()); {
+    /**
+     * Constructs the ItemStack from the current ItemBuilder configuration.
+     */
+    public ItemStack build() {
+        ItemStack item = new ItemStack(getMaterial(), getAmount(), getDurability(), getData()); {
             ItemMeta meta;
 
             if (getDisplayName() != null || getLore() != null || getFlags() != null) {

@@ -3,6 +3,7 @@ package com.rowlingsrealm.core;
 import com.rowlingsrealm.core.command.CommandBase;
 import com.rowlingsrealm.core.command.CoreCommand;
 import com.rowlingsrealm.core.message.MessageManager;
+import com.rowlingsrealm.core.user.UserManager;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -10,36 +11,37 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-
 /**
  * Copyright Tyler Grissom 2018
  *
  * TODO:
  *  - Simple ConfigurationSerializable implementation
  *  - Magic integration
- *  - Configurable messages
  *  - InventoryBuilder
  *  - InventoryUtility
  *  - Devise a better way to handle inventory sizes than numbers
  *  - Add checks for null items and stuff like that to Menu for simplification
  *  - Reflection utilities
- *  - Custom, deep ItemBuilder with documentation
- *  - Wrap Player
  *  - Pagination for menus
  *  - Add support to MessageManager for custom replace formats such as %value% instead of default $value
+ *  - Multi-line messages
  *  - Provide a set of default messages that are commonly used for consistency (i.e. no permission, only players, etc.)
  *  - Titles
  *  - Boss bars
  *  - Action bars
  *  - Add logging with verbosity options
+ *  - Custom Runnable implementation for scheduling
+ *  - Wrap Vault (PEX, eco, etc.)
+ *  - Some way to bundle sounds and messages together
+ *  - Scoreboard utilities
+ *  - Simple creation and access to custom configs
+ *  - Support for separate defaults folder for config write/read
+ *  - Simple SQL database driver access and method wrapping
  */
 public class CorePlugin extends JavaPlugin {
 
-    private FileConfiguration messagesYml;
-    private File messagesFile;
-
     @Getter private MessageManager messageManager;
+    @Getter private UserManager userManager;
 
     /**
      * Sets up the config.yml for this plugin.
@@ -91,6 +93,8 @@ public class CorePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        userManager = new UserManager(this);
+
         registerCommands(new CoreCommand(this));
     }
 
