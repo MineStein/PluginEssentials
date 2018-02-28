@@ -37,6 +37,8 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Simple creation and access to custom configs
  *  - Support for separate defaults folder for config write/read
  *  - Simple SQL database driver access and method wrapping
+ *  - Item message https://www.spigotmc.org/threads/itemmessagereloaded-popup-message-packet.304903/
+ *  - Advancements https://www.spigotmc.org/threads/advancement-creator-rapid-advancement-creation-library.293465/
  */
 public class CorePlugin extends JavaPlugin {
 

@@ -11,8 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="Core" target="1.8" />
-      <module name="Example" target="1.8" />
+      <module name="Core" target="1.5" />
+      <module name="Example" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
