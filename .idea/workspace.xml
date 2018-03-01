@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="fad95da2-f2b2-4216-af28-91410925e921" name="Default" comment="">
 <<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Core_jar2.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Core_jar2.xml" />
@@ -20,6 +21,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java" />
 >>>>>>> d9dc1eb6ba1385ac166a4023adc8649fc465c5a6
     </list>
+=======
+    <list default="true" id="fad95da2-f2b2-4216-af28-91410925e921" name="Default" comment="" />
+>>>>>>> Stashed changes
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Example/target/" />
@@ -86,8 +90,8 @@
 >>>>>>> d9dc1eb6ba1385ac166a4023adc8649fc465c5a6
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+            <state relative-caret-position="297">
+              <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -605,12 +609,12 @@
       <workItem from="1518738581320" duration="12063000" />
       <workItem from="1519529826317" duration="15488000" />
       <workItem from="1519584201468" duration="2783000" />
-      <workItem from="1519744048468" duration="12626000" />
+      <workItem from="1519744048468" duration="15722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42960000" />
+    <option name="totallyTimeSpent" value="46056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1114,6 +1118,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         <state relative-caret-position="4959">
           <caret line="95" column="39" lean-forward="false" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
@@ -1124,6 +1129,10 @@
 =======
         <state relative-caret-position="783">
           <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+=======
+        <state relative-caret-position="297">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
 >>>>>>> d9dc1eb6ba1385ac166a4023adc8649fc465c5a6
