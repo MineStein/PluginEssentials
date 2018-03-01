@@ -3,6 +3,7 @@ package com.rowlingsrealm.core.example.command;
 import com.rowlingsrealm.core.command.CommandBase;
 import com.rowlingsrealm.core.command.CommandDetails;
 import com.rowlingsrealm.core.example.ExamplePlugin;
+import com.rowlingsrealm.core.title.TitleData;
 import com.rowlingsrealm.core.user.User;
 import lombok.Getter;
 import org.bukkit.command.CommandSender;
@@ -31,10 +32,7 @@ public class ExampleCommand extends CommandBase {
         if (sender instanceof Player) {
             User user = new User(((Player) sender));
 
-            String title = getPlugin().getMessageManager().getMessage("title").withColor().get();
-            String subtitle = getPlugin().getMessageManager().getMessage("subtitle").withColor().get();
-
-            user.sendTitle(title, subtitle);
+            user.sendTitle(TitleData.builder().title("§cWelcome!").subtitle("§eIt worked!").build());
         }
     }
 

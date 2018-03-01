@@ -40,6 +40,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Item message https://www.spigotmc.org/threads/itemmessagereloaded-popup-message-packet.304903/
  *  - Advancements https://www.spigotmc.org/threads/advancement-creator-rapid-advancement-creation-library.293465/
  *  - Send tab header and footer
+ *  - Add package-info files, double-check documentation of everything, and get docs hosted
  */
 public class CorePlugin extends JavaPlugin {
 

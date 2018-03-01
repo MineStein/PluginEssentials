@@ -3,6 +3,8 @@ package com.rowlingsrealm.core.user;
 import com.rowlingsrealm.core.menu.Menu;
 import com.rowlingsrealm.core.message.Message;
 import com.rowlingsrealm.core.sound.QuickSound;
+import com.rowlingsrealm.core.title.TitleData;
+import com.rowlingsrealm.core.title.TitleUtility;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.Sound;
@@ -20,16 +22,8 @@ public class User {
 
     @Getter private Player player;
 
-    public void sendTitle(String title, String subtitle, int fadeIn, int stay, int fadeOut) {
-        getPlayer().sendTitle(title, subtitle, fadeIn, stay, fadeOut);
-    }
-
-    public void sendTitle(String title, String subtitle, int stay) {
-        sendTitle(title, subtitle, 10, stay, 10);
-    }
-
-    public void sendTitle(String title, String subtitle) {
-        sendTitle(title, subtitle, 100);
+    public void sendTitle(TitleData titleData) {
+        TitleUtility.sendTitle(titleData, getPlayer());
     }
 
     public PlayerInventory getInventory() {
