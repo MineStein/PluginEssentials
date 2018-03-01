@@ -42,6 +42,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Send tab header and footer
  *  - Add package-info files, double-check documentation of everything, and get docs hosted
  *  - More fleshed-out TimeUtility methods
+ *  - EffectLib integration
  */
 public class CorePlugin extends JavaPlugin {
 

@@ -7,6 +7,8 @@ import com.rowlingsrealm.core.title.TitleData;
 import com.rowlingsrealm.core.title.TitleUtility;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.PlayerInventory;
@@ -28,10 +30,6 @@ public class User {
 
     public PlayerInventory getInventory() {
         return getPlayer().getInventory();
-    }
-
-    public void performCommand(String cmd) {
-        getPlayer().performCommand(cmd);
     }
 
     public void openMenu(Menu menu) {
@@ -56,5 +54,9 @@ public class User {
 
     public void sendMessage(String... messages) {
         Arrays.stream(messages).forEach(this::sendMessage);
+    }
+
+    public void sendActionBar(String actionBar) {
+        getPlayer().spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(actionBar));
     }
 }
