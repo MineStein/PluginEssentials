@@ -52,7 +52,7 @@ public abstract class ConfirmationMenu extends Menu {
                 .build();
     }
 
-    abstract void onResolve(Result result, InventoryClickEvent event);
+    public abstract void onResolve(Result result, InventoryClickEvent event);
 
     @Override
     public void onClick(InventoryClickEvent event) {
