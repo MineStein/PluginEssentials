@@ -15,8 +15,11 @@ import org.bukkit.inventory.ItemStack;
 @Deprecated
 public abstract class ItemAction implements Listener {
 
-    @Getter         private CorePlugin plugin;
-    @Getter @Setter private ItemBuilder correspondingItem;
+    @Getter
+    private CorePlugin plugin;
+
+    @Getter @Setter
+    private ItemBuilder correspondingItem;
 
     public ItemAction(CorePlugin plugin) {
         this.plugin = plugin;

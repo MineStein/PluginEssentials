@@ -1,1 +1,2 @@
-enabled: 'Your $plugin has been enabled! Success!'
+title: '&aThis example worked!'
+subtitle: '&cAwesome!'

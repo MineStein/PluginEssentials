@@ -1,6 +1,6 @@
 package com.rowlingsrealm.core.color;
 
-import org.bukkit.ChatColor;
+import static org.bukkit.ChatColor.*;
 
 /**
  * Copyright Tyler Grissom 2018
@@ -18,7 +18,7 @@ public class ColorUtility {
      * @return The stripped String.
      */
     public static String strip(String str) {
-        return ChatColor.stripColor(str);
+        return stripColor(str);
     }
 
     /**
@@ -29,7 +29,7 @@ public class ColorUtility {
      * @return The translated String.
      */
     public static String altTranslate(char altColorCode, String str) {
-        return ChatColor.translateAlternateColorCodes(altColorCode, str);
+        return translateAlternateColorCodes(altColorCode, str);
     }
 
     /**
