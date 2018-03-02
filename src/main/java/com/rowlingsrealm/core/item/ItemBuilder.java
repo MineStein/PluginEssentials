@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public final class ItemBuilder {
+public class ItemBuilder {
 
     @Getter private Material material;
     @Getter private int amount;
