@@ -2,6 +2,7 @@ package com.rowlingsrealm.core.menu;
 
 import com.rowlingsrealm.core.CorePlugin;
 import com.rowlingsrealm.core.inventory.InventoryBuilder;
+import com.rowlingsrealm.core.inventory.InventoryRows;
 import com.rowlingsrealm.core.item.ItemBuilder;
 import com.rowlingsrealm.core.item.ItemUtility;
 import lombok.Getter;
@@ -68,7 +69,7 @@ public abstract class ConfirmationMenu extends Menu {
 
     @Override
     public Inventory getInventory() {
-        Inventory inv = InventoryBuilder.of(9, getMenuName());
+        Inventory inv = InventoryBuilder.of(InventoryRows.ONE_ROW, getMenuName());
 
         for (int i = 0; i < 4; i++) {
             inv.setItem(i, getAcceptedItemStack());
