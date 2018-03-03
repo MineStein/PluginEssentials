@@ -1,7 +1,6 @@
 package com.rowlingsrealm.core.inventory;
 
 import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -19,12 +18,34 @@ public class InventoryBuilder {
         return of(null, rows, title);
     }
 
-    @Getter @Setter
+    @Getter
     private InventoryHolder holder;
 
-    @Getter @Setter
+    @Getter
     private String name;
 
-    @Getter @Setter
-    private int size;
+    @Getter
+    private InventoryRows rows;
+
+    public InventoryBuilder holder(InventoryHolder holder) {
+        this.holder = holder;
+
+        return this;
+    }
+
+    public InventoryBuilder name(String name) {
+        this.name = name;
+
+        return this;
+    }
+
+    public InventoryBuilder rows(InventoryRows rows) {
+        this.rows = rows;
+
+        return this;
+    }
+
+    public Inventory build() {
+        return Bukkit.createInventory(getHolder(), getRows().getSlotCount(), getName());
+    }
 }

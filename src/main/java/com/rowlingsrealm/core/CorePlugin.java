@@ -26,7 +26,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Add support to MessageManager for custom replace formats such as %value% instead of default $value
  *  - Multi-line messages
  *  - Provide a set of default messages that are commonly used for consistency (i.e. no permission, only players, etc.)
- *  - Titles
  *  - Boss bars
  *  - Action bars
  *  - Add logging with verbosity options
@@ -43,6 +42,9 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Add package-info files, double-check documentation of everything, and get docs hosted
  *  - More fleshed-out TimeUtility methods
  *  - EffectLib integration
+ *  - Customize Essentials commands
+ *  - Wrap Worlds
+ *  - Lore splitter to divide up items
  */
 public class CorePlugin extends JavaPlugin {
 

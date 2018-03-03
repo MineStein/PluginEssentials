@@ -27,16 +27,4 @@ public enum InventoryRows {
 
         return null;
     }
-
-    public static InventoryRows closest(int slotCount) {
-
-    }
-
-    public static InventoryRows cieling(int slotCount) {
-
-    }
-
-    public static InventoryRows floor(int slotCount) {
-
-    }
 }
