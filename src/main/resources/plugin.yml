@@ -9,3 +9,11 @@ website: http://rowlingsrealm.com
 commands:
   core:
     description: Check the Core version.
+  discord:
+    description: Fetch Discord link.
+  faq:
+    description: Fetch FAQ link.
+  store:
+    description: Fetch store link.
+  website:
+    description: Fetch website link.

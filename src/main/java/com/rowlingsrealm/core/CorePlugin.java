@@ -1,7 +1,6 @@
 package com.rowlingsrealm.core;
 
-import com.rowlingsrealm.core.command.CommandBase;
-import com.rowlingsrealm.core.command.CoreCommand;
+import com.rowlingsrealm.core.command.*;
 import com.rowlingsrealm.core.message.MessageManager;
 import com.rowlingsrealm.core.user.UserManager;
 import lombok.Getter;
@@ -45,6 +44,8 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Customize Essentials commands
  *  - Wrap Worlds
  *  - Lore splitter to divide up items
+ *  - Cross-server utilities
+ *  - Add quick methods to CommandDetails such as hasPermission, isPlayer, etc.
  */
 public class CorePlugin extends JavaPlugin {
 
@@ -103,7 +104,17 @@ public class CorePlugin extends JavaPlugin {
     public void onEnable() {
         userManager = new UserManager(this);
 
-        registerCommands(new CoreCommand(this));
+        setupMessageManager();
+
+        {
+            registerCommands(
+                    new CoreCommand(this),
+                    new DiscordCommand(this),
+                    new FaqCommand(this),
+                    new StoreCommand(this),
+                    new WebsiteCommand(this)
+            );
+        }
     }
 
     @Override
