@@ -1,7 +1,7 @@
 package com.rowlingsrealm.core.example.command;
 
-import com.rowlingsrealm.core.command.CommandBase;
-import com.rowlingsrealm.core.command.CommandDetails;
+import com.rowlingsrealm.core.command.api.CommandBase;
+import com.rowlingsrealm.core.command.api.CommandDetails;
 import com.rowlingsrealm.core.example.ExamplePlugin;
 import com.rowlingsrealm.core.item.SkullItemBuilder;
 import com.rowlingsrealm.core.user.User;

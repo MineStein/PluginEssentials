@@ -1,6 +1,8 @@
 package com.rowlingsrealm.core.command;
 
 import com.rowlingsrealm.core.CorePlugin;
+import com.rowlingsrealm.core.command.api.CommandBase;
+import com.rowlingsrealm.core.command.api.CommandDetails;
 import com.rowlingsrealm.core.message.Message;
 import com.rowlingsrealm.core.message.MessageManager;
 import lombok.Getter;

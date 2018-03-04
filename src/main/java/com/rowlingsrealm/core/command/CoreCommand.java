@@ -1,6 +1,8 @@
 package com.rowlingsrealm.core.command;
 
 import com.rowlingsrealm.core.CorePlugin;
+import com.rowlingsrealm.core.command.api.CommandBase;
+import com.rowlingsrealm.core.command.api.CommandDetails;
 import lombok.Getter;
 
 import java.util.List;

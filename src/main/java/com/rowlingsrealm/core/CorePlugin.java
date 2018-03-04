@@ -1,6 +1,7 @@
 package com.rowlingsrealm.core;
 
 import com.rowlingsrealm.core.command.*;
+import com.rowlingsrealm.core.command.api.CommandBase;
 import com.rowlingsrealm.core.message.MessageManager;
 import com.rowlingsrealm.core.user.UserManager;
 import lombok.Getter;
@@ -16,9 +17,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  * TODO:
  *  - Simple ConfigurationSerializable implementation
  *  - Magic integration
- *  - InventoryBuilder
- *  - InventoryUtility
- *  - Devise a better way to handle inventory sizes than numbers
  *  - Add checks for null items and stuff like that to Menu for simplification
  *  - Reflection utilities
  *  - Pagination for menus
@@ -45,7 +43,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  *  - Wrap Worlds
  *  - Lore splitter to divide up items
  *  - Cross-server utilities
- *  - Add quick methods to CommandDetails such as hasPermission, isPlayer, etc.
  */
 public class CorePlugin extends JavaPlugin {
 

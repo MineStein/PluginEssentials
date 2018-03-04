@@ -1,4 +1,4 @@
-package com.rowlingsrealm.core.command;
+package com.rowlingsrealm.core.command.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
