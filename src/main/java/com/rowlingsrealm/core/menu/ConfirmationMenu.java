@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -56,15 +57,19 @@ public abstract class ConfirmationMenu extends Menu {
     public abstract void onResolve(Result result, InventoryClickEvent event);
 
     @Override
-    public void onClick(InventoryClickEvent event) {
-        ItemStack i = event.getCurrentItem();
+    public void onClick(InventoryEvent event) {
+        if (!(event instanceof InventoryClickEvent)) return;
+
+        InventoryClickEvent e = ((InventoryClickEvent) event);
+
+        ItemStack i = e.getCurrentItem();
 
         Result result;
 
         if (ItemUtility.isSimilar(i, getAcceptedItemStack().getType(), getAcceptedItemStack().getItemMeta().getDisplayName())) result = Result.ACCEPTED;
         else result = Result.DENIED;
 
-        onResolve(result, event);
+        onResolve(result, e);
     }
 
     @Override
