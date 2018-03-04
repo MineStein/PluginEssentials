@@ -23,7 +23,7 @@ public class CoreCommand extends CommandBase {
     public void execute(CommandDetails details) {
         String version = getPlugin().getDescription().getVersion();
 
-        details.getSender().sendMessage(format("§dRowling's Realm §8§l| §5§lCore §6v%s", version));
+        details.sendMessage(format("§dRowling's Realm §8§l| §5§lCore §6v%s", version));
     }
 
     public List<String> tab(CommandDetails details) {

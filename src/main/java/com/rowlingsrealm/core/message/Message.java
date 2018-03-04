@@ -98,4 +98,9 @@ public class Message {
     public String get() {
         return this.messageString;
     }
+
+    @Override
+    public String toString() {
+        return get();
+    }
 }

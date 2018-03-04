@@ -1,6 +1,7 @@
 package com.rowlingsrealm.core.command;
 
 import com.rowlingsrealm.core.CorePlugin;
+import com.rowlingsrealm.core.message.Message;
 import com.rowlingsrealm.core.message.MessageManager;
 import lombok.Getter;
 
@@ -23,11 +24,10 @@ public abstract class InfoCommand extends CommandBase {
     public void execute(CommandDetails details) {
         MessageManager messageManager = getPlugin().getMessageManager();
 
-        String info = messageManager.getMessage("info." + details.getLabel())
-                .withColor()
-                .get();
+        Message info = messageManager.getMessage("info." + details.getLabel())
+                .withColor();
 
-        details.getSender().sendMessage(info);
+        details.sendMessage(info);
     }
 
     @Override
