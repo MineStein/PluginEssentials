@@ -5,10 +5,11 @@ import com.rowlingsrealm.core.sound.QuickSound;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Cancellable;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryEvent;
 import org.bukkit.inventory.Inventory;
 
 import java.util.Collection;
@@ -26,12 +27,13 @@ public abstract class Menu implements Listener {
         Bukkit.getPluginManager().registerEvents(this, getPlugin());
     }
 
-    public abstract void onClick(final InventoryClickEvent event);
+    public abstract void onClick(final InventoryEvent event);
     public abstract Inventory getInventory();
 
     @EventHandler(priority = EventPriority.LOWEST)
-    public void handler(final InventoryClickEvent event) {
-        if (event.isCancelled()) return;
+    public void handler(final InventoryEvent event) {
+        if ((event instanceof Cancellable) && ((Cancellable) event).isCancelled()) return;
+
         if (event.getInventory().getName().equals(getInventory().getName())) onClick(event);
     }
 
