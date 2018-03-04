@@ -29,7 +29,7 @@ public abstract class Menu implements Listener {
     public abstract void onClick(final InventoryClickEvent event);
     public abstract Inventory getInventory();
 
-    @EventHandler(priority = EventPriority.LOW)
+    @EventHandler(priority = EventPriority.LOWEST)
     public void handler(final InventoryClickEvent event) {
         if (event.isCancelled()) return;
         if (event.getInventory().getName().equals(getInventory().getName())) onClick(event);
