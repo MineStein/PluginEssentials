@@ -10,6 +10,7 @@ import lombok.Getter;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Sound;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.PlayerInventory;
 
@@ -58,5 +59,21 @@ public class User {
 
     public void sendActionBar(String actionBar) {
         getPlayer().spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(actionBar));
+    }
+
+    public boolean hasPlayedBefore() {
+        return getPlayer().hasPlayedBefore();
+    }
+
+    public void perform(String command) {
+        getPlayer().performCommand(command);
+    }
+
+    public void chat(String message) {
+        getPlayer().chat(message);
+    }
+
+    public int getPing() {
+        return ((CraftPlayer) getPlayer()).getHandle().ping;
     }
 }

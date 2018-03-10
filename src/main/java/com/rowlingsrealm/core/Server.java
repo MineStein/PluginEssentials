@@ -2,11 +2,14 @@ package com.rowlingsrealm.core;
 
 import com.rowlingsrealm.core.message.Message;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 import java.util.function.Consumer;
 
 /**
@@ -33,6 +36,10 @@ public class Server {
         return Bukkit.getOnlinePlayers();
     }
 
+    public static OfflinePlayer[] getOfflinePlayers() {
+        return Bukkit.getOfflinePlayers();
+    }
+
     public static void broadcast(String str) {
         getOnlinePlayers().forEach((Consumer<Player>) player -> player.sendMessage(str));
     }
@@ -47,5 +54,29 @@ public class Server {
 
     public static List<World> getWorlds() {
         return Bukkit.getWorlds();
+    }
+
+    public static Player getPlayer(String id) {
+        return Bukkit.getPlayer(id);
+    }
+
+    public static OfflinePlayer getOfflinePlayer(String id) {
+        return Bukkit.getOfflinePlayer(id);
+    }
+
+    public static Player getPlayer(UUID uuid) {
+        return Bukkit.getPlayer(uuid);
+    }
+
+    public static OfflinePlayer getOfflinePlayer(UUID uuid) {
+        return Bukkit.getOfflinePlayer(uuid);
+    }
+
+    public static void dispatchCommand(CommandSender sender, String command) {
+        Bukkit.dispatchCommand(sender, command);
+    }
+
+    public static void dispatchConsoleCommand(String command) {
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
     }
 }

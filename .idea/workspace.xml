@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4fdc596-32b3-470c-bcc7-3cf246d5d28e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Example/src/main/java/com/rowlingsrealm/core/example/command/ExampleCommand.java" afterPath="$PROJECT_DIR$/Example/src/main/java/com/rowlingsrealm/core/example/command/ExampleCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/Server.java" afterPath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,24 +30,53 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="2133">
+              <caret line="79" column="67" lean-forward="false" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#972#973#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#929#930#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1175#1176#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1308#1309#0" expanded="true" />
+                <element signature="e#1353#1354#0" expanded="true" />
+                <element signature="e#1394#1395#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+                <element signature="e#1599#1600#0" expanded="true" />
+                <element signature="e#1648#1649#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+                <element signature="e#1756#1757#0" expanded="true" />
+                <element signature="e#1808#1809#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+              <folding>
+                <element signature="e#1761#1762#0" expanded="true" />
+                <element signature="e#1813#1814#0" expanded="true" />
+                <element signature="e#1856#1857#0" expanded="true" />
+                <element signature="e#1907#1908#0" expanded="true" />
+                <element signature="e#1947#1948#0" expanded="true" />
+                <element signature="e#1988#1989#0" expanded="true" />
+                <element signature="e#2016#2017#0" expanded="true" />
+                <element signature="e#2083#2084#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,7 +143,9 @@
         <option value="$PROJECT_DIR$/Example/src/main/java/com/rowlingsrealm/core/example/command/ExampleCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/world/WorldWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/world/World.java" />
+        <option value="$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-20180220.020734-118.jar!/org/bukkit/Bukkit.class" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java" />
       </list>
     </option>
   </component>
@@ -230,6 +260,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,12 +401,12 @@
       <workItem from="1520203469302" duration="15000" />
       <workItem from="1520390888137" duration="51000" />
       <workItem from="1520459876319" duration="36000" />
-      <workItem from="1520639060342" duration="1775000" />
+      <workItem from="1520639060342" duration="2238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16618000" />
+    <option name="totallyTimeSpent" value="17081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -785,26 +824,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+          <folding>
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1813#1814#0" expanded="true" />
+            <element signature="e#1856#1857#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+            <element signature="e#1947#1948#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2016#2017#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-20180220.020734-118.jar!/org/bukkit/Bukkit.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2470">
+          <caret line="107" column="26" lean-forward="false" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="2133">
+          <caret line="79" column="67" lean-forward="false" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1599#1600#0" expanded="true" />
+            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
           </folding>
         </state>
       </provider>
