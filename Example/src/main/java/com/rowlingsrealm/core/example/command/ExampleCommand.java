@@ -28,7 +28,7 @@ public class ExampleCommand extends CommandBase {
     public void execute(CommandDetails details) {
         CommandSender sender = details.getSender();
 
-        sender.sendMessage("The example works!");
+        details.sendMessage("The example works!");
 
         if (sender instanceof Player) {
             User user = new User(((Player) sender));
