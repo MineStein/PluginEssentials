@@ -1,13 +1,11 @@
 package com.rowlingsrealm.core.example.command;
 
-import com.rowlingsrealm.core.color.ColorUtility;
 import com.rowlingsrealm.core.command.api.CommandBase;
 import com.rowlingsrealm.core.command.api.CommandDetails;
 import com.rowlingsrealm.core.example.ExamplePlugin;
-import com.rowlingsrealm.core.magic.MagicUtility;
 import lombok.Getter;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.List;
 
@@ -26,18 +24,9 @@ public class ExampleCommand extends CommandBase {
 
     public void execute(CommandDetails details) {
         CommandSender sender = details.getSender();
+        FileConfiguration fc = getPlugin().getYamlManager().getCustomYaml("example").getYml();
 
-        details.sendMessage("The example works!");
-
-        if (sender instanceof Player) {
-            Player p = ((Player) sender);
-
-            if (MagicUtility.isHoldingWand(p)) {
-                p.sendMessage(ColorUtility.translate("&aIt works!"));
-            } else {
-                p.sendMessage(ColorUtility.translate("&cIt didn't work :( Hold a wand!"));
-            }
-        }
+        sender.sendMessage(fc.getString("example"));
     }
 
     public List<String> tab(CommandDetails details) {

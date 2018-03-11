@@ -13,5 +13,6 @@ public class ExamplePlugin extends CorePlugin {
         registerCommands(new ExampleCommand(this));
 
         setupMessageManager();
+        setupYamlManager();
     }
 }

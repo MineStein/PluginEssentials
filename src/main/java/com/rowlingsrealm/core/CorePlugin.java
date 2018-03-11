@@ -2,6 +2,7 @@ package com.rowlingsrealm.core;
 
 import com.rowlingsrealm.core.command.*;
 import com.rowlingsrealm.core.command.api.CommandBase;
+import com.rowlingsrealm.core.data.YamlManager;
 import com.rowlingsrealm.core.integration.MagicIntegration;
 import com.rowlingsrealm.core.integration.PluginIntegration;
 import com.rowlingsrealm.core.message.MessageManager;
@@ -27,7 +28,6 @@ import java.util.List;
  *  - Pagination for menus
  *  - Add support to MessageManager for custom replace formats such as %value% instead of default $value
  *  - Multi-line messages
- *  - Provide a set of default messages that are commonly used for consistency (i.e. no permission, only players, etc.)
  *  - Boss bars
  *  - Add logging with verbosity options
  *  - Custom Runnable implementation for scheduling
@@ -41,11 +41,13 @@ import java.util.List;
  *  - Advancements https://www.spigotmc.org/threads/advancement-creator-rapid-advancement-creation-library.293465/
  *  - Send tab header and footer
  *  - Add package-info files, double-check documentation of everything, and get docs hosted
+ *  - Post to GitHub, Mavenize
  *  - More fleshed-out TimeUtility methods
  *  - EffectLib integration
  *  - Customize Essentials commands
  *  - Wrap Worlds
  *  - Lore splitter to divide up items
+ *  - Wiki document everything
  */
 public class CorePlugin extends JavaPlugin {
 
@@ -54,6 +56,9 @@ public class CorePlugin extends JavaPlugin {
 
     @Getter
     private MessageManager messageManager;
+
+    @Getter
+    private YamlManager yamlManager;
 
     @Getter
     private UserManager userManager;
@@ -107,6 +112,19 @@ public class CorePlugin extends JavaPlugin {
         this.messageManager = new MessageManager(this);
 
         return this.messageManager;
+    }
+
+    /**
+     * Sets up the custom YAML file handling manager.
+     *
+     * @return The YamlManager
+     */
+    public YamlManager setupYamlManager() {
+        if (yamlManager != null) return yamlManager;
+
+        this.yamlManager = new YamlManager(this);
+
+        return this.yamlManager;
     }
 
     /**
