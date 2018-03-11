@@ -2,6 +2,8 @@ package com.rowlingsrealm.core;
 
 import com.rowlingsrealm.core.command.*;
 import com.rowlingsrealm.core.command.api.CommandBase;
+import com.rowlingsrealm.core.integration.MagicIntegration;
+import com.rowlingsrealm.core.integration.PluginIntegration;
 import com.rowlingsrealm.core.message.MessageManager;
 import com.rowlingsrealm.core.user.UserManager;
 import lombok.Getter;
@@ -10,6 +12,10 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Copyright Tyler Grissom 2018
@@ -46,8 +52,42 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class CorePlugin extends JavaPlugin {
 
-    @Getter private MessageManager messageManager;
-    @Getter private UserManager userManager;
+    @Getter
+    private static CorePlugin instance;
+
+    @Getter
+    private MessageManager messageManager;
+
+    @Getter
+    private UserManager userManager;
+
+    @Getter
+    private List<PluginIntegration> registeredIntegrations;
+
+    /**
+     * Registers all of your plugin integrations.
+     *
+     * @param integrations The integrations you wish to register.
+     */
+    public void registerPluginIntegrations(PluginIntegration... integrations) {
+        Arrays.stream(integrations)
+                .filter(integration -> (!getRegisteredIntegrations().contains(integration) && integration.isSuccessful()))
+                .forEach(registeredIntegrations::add);
+    }
+
+    /**
+     * Returns the requested integration.
+     *
+     * @param name The plugin name.
+     * @return The integration instance.
+     */
+    public PluginIntegration getPluginIntegration(String name) {
+        for (PluginIntegration integration : getRegisteredIntegrations()) {
+            if (integration.getPluginName().equals(name)) return integration;
+        }
+
+        return null;
+    }
 
     /**
      * Sets up the config.yml for this plugin.
@@ -99,9 +139,17 @@ public class CorePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        instance = this;
         userManager = new UserManager(this);
+        registeredIntegrations = new ArrayList<>();
 
         setupMessageManager();
+
+        {
+            registerPluginIntegrations(
+                    new MagicIntegration(this)
+            );
+        }
 
         {
             registerCommands(

@@ -6,6 +6,8 @@ description: "Rowling's Realm's core plugin!"
 authors: [Tyler Grissom]
 website: http://rowlingsrealm.com
 
+softdepend: [Magic]
+
 commands:
   core:
     description: Check the Core version.

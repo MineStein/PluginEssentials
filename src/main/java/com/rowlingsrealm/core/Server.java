@@ -6,7 +6,9 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -19,16 +21,16 @@ public class Server {
 
     public static class Logger {
 
-        public static void info(String str) {
-            Bukkit.getLogger().info(str);
+        public static void info(String... str) {
+            Arrays.stream(str).forEach(Bukkit.getLogger()::info);
         }
 
-        public static void warn(String str) {
-            Bukkit.getLogger().warning(str);
+        public static void warn(String... str) {
+            Arrays.stream(str).forEach(Bukkit.getLogger()::warning);
         }
 
-        public static void severe(String str) {
-            Bukkit.getLogger().severe(str);
+        public static void severe(String... str) {
+            Arrays.stream(str).forEach(Bukkit.getLogger()::severe);
         }
     }
 
@@ -78,5 +80,9 @@ public class Server {
 
     public static void dispatchConsoleCommand(String command) {
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
+    }
+
+    public static PluginManager getPluginManager() {
+        return Bukkit.getPluginManager();
     }
 }
