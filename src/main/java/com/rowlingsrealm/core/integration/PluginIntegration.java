@@ -1,7 +1,7 @@
 package com.rowlingsrealm.core.integration;
 
 import com.rowlingsrealm.core.CorePlugin;
-import com.rowlingsrealm.core.Server;
+import com.rowlingsrealm.core.server.Server;
 import lombok.Getter;
 
 /**

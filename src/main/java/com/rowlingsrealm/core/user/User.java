@@ -1,5 +1,8 @@
 package com.rowlingsrealm.core.user;
 
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
+import com.rowlingsrealm.core.CorePlugin;
 import com.rowlingsrealm.core.menu.Menu;
 import com.rowlingsrealm.core.message.Message;
 import com.rowlingsrealm.core.sound.QuickSound;
@@ -75,5 +78,14 @@ public class User {
 
     public int getPing() {
         return ((CraftPlayer) getPlayer()).getHandle().ping;
+    }
+
+    public void sendToServer(String server) {
+        ByteArrayDataOutput out = ByteStreams.newDataOutput();
+
+        out.writeUTF("Connect");
+        out.writeUTF(server);
+
+        getPlayer().sendPluginMessage(CorePlugin.getInstance(), "BungeeCord", out.toByteArray());
     }
 }

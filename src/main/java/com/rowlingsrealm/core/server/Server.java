@@ -1,6 +1,8 @@
-package com.rowlingsrealm.core;
+package com.rowlingsrealm.core.server;
 
+import com.rowlingsrealm.core.CorePlugin;
 import com.rowlingsrealm.core.message.Message;
+import com.rowlingsrealm.core.user.User;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
@@ -31,6 +33,17 @@ public class Server {
 
         public static void severe(String... str) {
             Arrays.stream(str).forEach(Bukkit.getLogger()::severe);
+        }
+    }
+
+    public static class Utilities {
+
+        public static void sendToServer(User user, String server) {
+            user.sendToServer(server);
+        }
+
+        public static void sendToServer(Player player, String server) {
+            CorePlugin.getInstance().getUserManager().getUser(player).sendToServer(server);
         }
     }
 

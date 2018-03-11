@@ -145,6 +145,8 @@ public class CorePlugin extends JavaPlugin {
 
         setupMessageManager();
 
+        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+
         {
             registerPluginIntegrations(
                     new MagicIntegration(this)
