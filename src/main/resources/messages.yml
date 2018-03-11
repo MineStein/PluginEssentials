@@ -1,3 +1,8 @@
+static:
+  no_permission: '&4&lX &cYou do not have permission to do that!'
+  target_offline: '&4&lX &cThat player is offline!'
+  only_players: '&4&lX &cOnly players can do that!'
+
 info:
   website: '&eVisit our website here&8: &7http://rowlingsrealm.com'
   discord: '&eJoin our Discord here&8: &7https://discord.gg/jQSTPKJ'

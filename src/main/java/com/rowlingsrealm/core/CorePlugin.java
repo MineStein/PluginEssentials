@@ -22,7 +22,6 @@ import java.util.List;
  *
  * TODO:
  *  - Simple ConfigurationSerializable implementation
- *  - Magic integration
  *  - Add checks for null items and stuff like that to Menu for simplification
  *  - Reflection utilities
  *  - Pagination for menus
@@ -30,7 +29,6 @@ import java.util.List;
  *  - Multi-line messages
  *  - Provide a set of default messages that are commonly used for consistency (i.e. no permission, only players, etc.)
  *  - Boss bars
- *  - Action bars
  *  - Add logging with verbosity options
  *  - Custom Runnable implementation for scheduling
  *  - Wrap Vault (PEX, eco, etc.)
@@ -48,7 +46,6 @@ import java.util.List;
  *  - Customize Essentials commands
  *  - Wrap Worlds
  *  - Lore splitter to divide up items
- *  - Cross-server utilities
  */
 public class CorePlugin extends JavaPlugin {
 
