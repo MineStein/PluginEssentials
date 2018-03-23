@@ -15,7 +15,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -72,9 +71,10 @@ public class CorePlugin extends JavaPlugin {
      * @param integrations The integrations you wish to register.
      */
     public void registerPluginIntegrations(PluginIntegration... integrations) {
-        Arrays.stream(integrations)
-                .filter(integration -> (!getRegisteredIntegrations().contains(integration) && integration.isSuccessful()))
-                .forEach(registeredIntegrations::add);
+        for (PluginIntegration integration :
+                integrations) {
+            if (!getRegisteredIntegrations().contains(integration) && integration.isSuccessful()) registeredIntegrations.add(integration);
+        }
     }
 
     /**

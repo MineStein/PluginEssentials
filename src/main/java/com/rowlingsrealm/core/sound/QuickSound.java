@@ -15,10 +15,11 @@ public class QuickSound {
      * @param players The players to play the sound for.
      */
     public static void play(Sound sound, Player... players) {
-        for (Player player :
-                players) {
-            player.playSound(player.getLocation(), sound, 1F, 1F);
-        }
+        SoundData data = new SoundData.SoundDataBuilder()
+                .sound(sound)
+                .build();
+
+        data.play(players);
     }
 
     /**
