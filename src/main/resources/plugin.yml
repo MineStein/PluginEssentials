@@ -1,21 +1,11 @@
-name: Core
+name: PluginEssentials
 version: 1.0.0
-main: com.rowlingsrealm.core.CorePlugin
+main: me.tylergrissom.pluginessentials.SpigotPlugin
 
-description: "Rowling's Realm's core plugin!"
+description: "Provides a set of libraries for Spigot plugins."
 authors: [Tyler Grissom]
-website: http://rowlingsrealm.com
-
-softdepend: [Magic]
+website: http://tyler-g.net
 
 commands:
-  core:
-    description: Check the Core version.
-  discord:
-    description: Fetch Discord link.
-  faq:
-    description: Fetch FAQ link.
-  store:
-    description: Fetch store link.
-  website:
-    description: Fetch website link.
+  pluginessentials:
+    description: Check the PluginEssentials version.
