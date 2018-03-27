@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4fdc596-32b3-470c-bcc7-3cf246d5d28e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/command/PluginEssentialsCommand.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Core_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Core_jar2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/Example.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/src/main/java/com/rowlingsrealm/core/example/ExamplePlugin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/src/main/java/com/rowlingsrealm/core/example/command/ExampleCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/src/main/resources/example.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/src/main/resources/messages.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/src/main/resources/plugin.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/CorePlugin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/CoreCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/DiscordCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/FaqCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/InfoCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/StoreCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/WebsiteCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/integration/MagicIntegration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/integration/PluginIntegration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/magic/MagicUtility.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Core.iml" afterPath="$PROJECT_DIR$/PluginEssentials.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/color/ColorUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/color/ColorUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/api/CommandBase.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/command/api/CommandBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/api/CommandDetails.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/command/api/CommandDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/data/CustomYaml.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/data/CustomYaml.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/data/YamlManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/data/YamlManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/inventory/InventoryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/inventory/InventoryBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/inventory/InventoryRows.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/inventory/InventoryRows.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/inventory/InventoryUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/inventory/InventoryUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/item/ItemAction.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/item/ItemAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/item/ItemBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/item/ItemBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/item/ItemUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/item/ItemUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/item/SkullItemBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/item/SkullItemBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/math/MathUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/math/MathUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/menu/ConfirmationMenu.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/menu/ConfirmationMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/menu/Menu.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/menu/Menu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/menu/PlayerBasedMenu.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/menu/PlayerBasedMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/message/Message.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/message/Message.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/message/MessageManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/message/MessageManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/message/StaticMessages.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/message/StaticMessages.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/server/Server.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/server/Server.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/sound/QuickSound.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/sound/QuickSound.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/sound/SoundData.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/sound/SoundData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/string/StringUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/string/StringUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/time/TimeUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/time/TimeUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/title/TitleData.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/title/TitleData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/title/TitleUtility.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/title/TitleUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/user/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/user/UserManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/user/UserManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,12 +58,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="108">
+                <caret line="4" column="100" lean-forward="false" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -143,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/FaqCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/StoreCommand.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/core/command/CommandDetails.java" />
@@ -194,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/command/CoreCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/SpigotPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/command/PluginEssentialsCommand.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -444,12 +403,12 @@
       <workItem from="1522081469124" duration="219000" />
       <workItem from="1522190392643" duration="679000" />
       <workItem from="1522191113430" duration="65000" />
-      <workItem from="1522191209435" duration="495000" />
+      <workItem from="1522191209435" duration="800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42980000" />
+    <option name="totallyTimeSpent" value="43285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -495,14 +454,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/pluginessentials/SpigotPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -665,8 +616,8 @@
         <state relative-caret-position="243">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -769,6 +720,17 @@
         <state relative-caret-position="270">
           <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="108">
+            <caret line="4" column="100" lean-forward="false" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

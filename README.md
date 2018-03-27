@@ -1,5 +1,5 @@
-# Rowling's Realm Core
+# PluginEssentials
 
-This is an experimental project which includes commonly used assets and code used throughout RR"s plugin codebase.
+The goal of this plugin is simple: provide an effective base for the rest of my Spigot resources.
 
-Fellow developers, feel free to make your own contributions to this, or check out the wiki tab to the left to integrate this into your own plugin.
+`KEEP IN MIND: This resource has little to no effect on its own. Pair it with compatible resources.`
